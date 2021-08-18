@@ -1,0 +1,24 @@
+#codigo lê quantos testes serão feitos e devolve a soma dos num impares entre os valores
+testes = int(input('testes: '))
+impares = []
+for num in range(testes):
+    x, y = input().split()
+    x = int(x)
+    y = int(y)
+    if x <= y:
+        lista = list(range(x+1, y))
+        for num in lista:
+            if num % 2 == 1:  # se quiser a soma do pares é so mudar essa e a linha 20
+                impares.append(num)
+        lista = []
+    elif y < x:
+        temp = y
+        y = x
+        x = temp
+        lista = list(range(x+1, y))
+        for num in lista:
+            if num % 2 == 1:
+                impares.append(num)
+        lista = [] # é importante transformar em uma lista vazia denovo se não entra em conflito com novos testes
+    print(sum(impares))
+    impares = [] # mesmo comentario da linha 22
