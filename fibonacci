@@ -1,0 +1,11 @@
+# código imprime quantos valores da sequência de fibonacci serão exibidos
+def fibonacci():
+    addlista = lista[-1] + lista[-2]
+    lista.append(addlista)
+
+
+valor = int(input())
+lista = [0, 1]
+for num in range(valor - 2):
+    fibonacci()
+print(*lista)
